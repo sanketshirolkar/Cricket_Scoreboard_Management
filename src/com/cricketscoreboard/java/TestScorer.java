@@ -10,7 +10,8 @@ public class TestScorer
 		MatchInformation minfo = new MatchInformation();
 		Scanner readFromKb = new Scanner(System.in);
 		Scanner forPlayers = new Scanner(System.in);
-		System.out.println("ENter no of overs");
+		
+		System.out.println("ENter no. of overs");
 		MatchInformation.maxOversPerInnings = readFromKb.nextInt();
 		System.out.println("ENter the venue");
 		MatchInformation.venue = readFromKb.next();
@@ -26,12 +27,14 @@ public class TestScorer
 		minfo.tossUpdate();
 		
 		TeamLists tlist = new TeamLists();
-	
 		System.out.println("Enter the path");
 		TeamLists.path = forPlayers.nextLine(); 
-		tlist.generateTeamLists();			
-	
-	
+		tlist.generateTeamLists();
+
+		Players pl = new Players();
+		pl.team_One();
+		pl.team_Two();
+		
 		readFromKb.close();
 		forPlayers.close();
 	}	
