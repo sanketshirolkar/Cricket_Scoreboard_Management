@@ -34,6 +34,7 @@ public class TestScorer
 		Players pl = new Players();
 		pl.team_One();
 		pl.team_Two();
+		pl.battingFirst();
 		
 		readFromKb.close();
 		forPlayers.close();
